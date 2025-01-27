@@ -28,6 +28,10 @@ async function readSensorTemperature(req, res, next) {
     })
     .then((sensorTemperature) => {
       req.temperature = sensorTemperature;
+      req.timestamp = new Date().toISOString();
+
+      console.log(req.temperature);
+      console.log(req.timestamp);
 
       next();
     })
@@ -41,7 +45,10 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/temperature-data", readSensorTemperature, (req, res) => {
-  res.json({ temperature: `${req.temperature}°C` });
+  res.json({
+    temperature: `${req.temperature}°C`,
+    timestamp: req.timestamp,
+  });
 });
 
 app.use((err, req, res, next) => {
