@@ -10,7 +10,7 @@
 
 # The folder should now consist of node_modules, package.json & package-lock.json
 
-# Confirm that package.json has express as a dependencie and index.js as main
+# Confirm that package.json has express as a dependencie, module as type and index.js as main
 
 # Create a file index.js in the project folder with the the same content as in:
 
