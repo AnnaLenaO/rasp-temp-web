@@ -15,3 +15,5 @@
 # Create a file index.js in the project folder with the the same content as in:
 
 ServerRPi\index.js
+
+# Exchange <sensor-folder> in TEMP_SENSOR_PATH with the real sonsor folder
