@@ -16,4 +16,4 @@
 
 ServerRPi\index.js
 
-# Exchange <sensor-folder> in TEMP_SENSOR_PATH with the real sonsor folder
+# Exchange <sensor-folder> in TEMP_SENSOR_PATH with the real sensor folder
