@@ -1,18 +1,18 @@
 // @ts-check
 
-import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import jestPlugin from "eslint-plugin-jest";
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import jestPlugin from 'eslint-plugin-jest';
 
 export default tseslint.config(
   {
-    ignores: ["**/build/**", "**/dist/**"],
+    ignores: ['**/build/**', '**/dist/**'],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   {
     plugins: {
-      "@typescript-eslint": tseslint.plugin,
+      '@typescript-eslint': tseslint.plugin,
       jest: jestPlugin,
     },
     languageOptions: {
@@ -23,8 +23,8 @@ export default tseslint.config(
       },
     },
     rules: {
-      quotes: ["error", "single"],
-      "@typescript-eslint/quotes": ["error", "single"],
+      quotes: ['error', 'single'],
+      '@typescript-eslint/quotes': ['error', 'single'],
     },
   }
 );
