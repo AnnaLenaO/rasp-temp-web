@@ -40,40 +40,40 @@ Before every pull request:
 
 # Clone repository & connect with Raspberry Pi
 
-Connect the physical components mentioned above
-Google it or follow instructions at
+Connect the physical components mentioned above\
+Google it or follow instructions at\
 https://www.raspberrypi.com
-for how to connect the components to the Raspberry Pi GPIO
-Prepare the Raspberry Pi 5 & install recommended Operating System according to:
+for how to connect the components to the Raspberry Pi GPIO\
+Prepare the Raspberry Pi 5 & install recommended Operating System according to:\
 https://www.raspberrypi.com/documentation/computers/getting-started.html#setting-up-your-raspberry-pi
 
 Clone this repository
 
 Check your local network for the Raspberry Pi Ip-adress
 
-Prepare Raspberry Pi according to the ServerRPi\README.md
-Connect with Raspberry Pi & start the server, for example from commando prompt with:
+Prepare Raspberry Pi according to the ServerRPi\README.md\
+Connect with Raspberry Pi & start the server, for example from commando prompt with:\
 -node index.js
 
-For the clone, go to backend folder & add a .env-folder with following content:
+For the clone, go to backend folder & add a .env-folder with following content:\
 
-BACK_HOST=localhost
+`BACK_HOST=localhost
 BACK_PORT=5080
 RPI_HOST=<Raspberry-Pi-IP-adress>
-RPI_PORT=3000
+RPI_PORT=3000`
 
-then run:
--npm install
+then run:\
+-npm install\
 -npm start
 
-Go to frontend & run:
--npm install
+Go to frontend & run:\
+-npm install\
 -npm run dev
 
 Open a webb client & connect to the app by pasting the http- adress shown by VITE in the terminal,
-for example http://localhost:5173
+for example\ http://localhost:5173
 
-The temperature & timestamp are now visible at the web page.
+The temperature & timestamp are now visible at the web page.\
 Reload the page for a new measurement of temperature with updated timestamp.
 
 # Clone repository & test without Raspberry Pi 5
@@ -82,10 +82,10 @@ Clone this repository
 
 Go to backend folder & add a .env-folder with following content:
 
-BACK_HOST=localhost
-BACK_PORT=5080
+`BACK_HOST=localhost
+BACK_PORT=5080`
 
-In the backend\src\index.ts
+In the backend\src\index.ts\
 out comment the whole function
 
 `function fetchPondData(...): any{}`
@@ -103,27 +103,27 @@ with
         temperature: `${23}°C`,
         timestamp: new Date(0).toISOString(),
     });
-})`;
+});`
 
-Save the changes
-then run:
--npm install
+Save the changes\
+then run:\
+-npm install\
 -npm start
 
-Go to frontend & run:
--npm install
+Go to frontend & run:\
+-npm install\
 -npm run dev
 
 Open a webb client & connect to the app by pasting the http- adress shown by VITE in the terminal,
-for example http://localhost:5173
+for example\ http://localhost:5173
 
-The temperature & timestamp are now visible at the web page.
-Change the temperature value > 23
+The temperature & timestamp are now visible at the web page.\
+Change the temperature value 23
 in
 
 `temperature: `${23}°C``
 
-at the backend server with a new value
-Save the change and restart the backend server
+at the backend server with a new value\
+Save the change and restart the backend server\
 
 Reload the page for the new temperature to appear
