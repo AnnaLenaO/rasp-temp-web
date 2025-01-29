@@ -8,7 +8,7 @@ const Temperature: React.FC = () => {
 
   return (
     <div className="temperature">
-      <p>{data.temperature}°C</p>
+      <p>{data.temperature}</p>
     </div>
   );
 }
